@@ -7,3 +7,9 @@ function add_theme_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_assets' );
+
+function add_admin_assets() {
+	wp_enqueue_style('bulma', get_template_directory_uri() . "/assets/bulma/css/bulma.min.css");
+}
+
+add_action('admin_enqueue_scripts', 'add_admin_assets');
